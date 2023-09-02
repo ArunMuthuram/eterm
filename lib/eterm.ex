@@ -191,4 +191,11 @@ defmodule ETerm do
   defp to_b(?d), do: '1101'
   defp to_b(?e), do: '1110'
   defp to_b(?f), do: '1111'
+
+  def get_all_datatype_info() do
+    ETerm.show(1) # small integer
+    ETerm.show(0b11111111_11111111_11111111_11111111_11111111_11111111_11111111_11111111_10101010) # pos big integer
+    ETerm.show(0b11111111_11111111_11111111_11111111_11111111_11111111_11111111_11111111_10101010 * -1) # neg big integer
+  end
 end
+ETerm.get_all_datatype_info()

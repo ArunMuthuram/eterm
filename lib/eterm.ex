@@ -197,6 +197,8 @@ defmodule ETerm do
     ETerm.show(0b11111111_11111111_11111111_11111111_11111111_11111111_11111111_11111111_10101010) # pos big integer
     ETerm.show(0b11111111_11111111_11111111_11111111_11111111_11111111_11111111_11111111_10101010 * -1) # neg big integer
     ETerm.show(250.125) # float
+    ETerm.show(false) # existing atom
+    ETerm.show(:new_atom) # custom atom
   end
 end
 ETerm.get_all_datatype_info()

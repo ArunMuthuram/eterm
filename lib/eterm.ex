@@ -199,6 +199,9 @@ defmodule ETerm do
     ETerm.show(250.125) # float
     ETerm.show(false) # existing atom
     ETerm.show(:new_atom) # custom atom
+    ETerm.show([]) # empty list
+    ETerm.show([100, :atom_1, 1.5]) # list
+    ETerm.show({100, :atom_1, 1.5}) # tuple
   end
 end
 ETerm.get_all_datatype_info()

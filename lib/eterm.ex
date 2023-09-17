@@ -193,15 +193,25 @@ defmodule ETerm do
   defp to_b(?f), do: '1111'
 
   def get_all_datatype_info() do
+    separator = "------------------------------------------------------------------------------------------------------------"
     ETerm.show(1) # small integer
+    IO.puts(separator)
     ETerm.show(0b11111111_11111111_11111111_11111111_11111111_11111111_11111111_11111111_10101010) # pos big integer
+    IO.puts(separator)
     ETerm.show(0b11111111_11111111_11111111_11111111_11111111_11111111_11111111_11111111_10101010 * -1) # neg big integer
+    IO.puts(separator)
     ETerm.show(250.125) # float
+    IO.puts(separator)
     ETerm.show(false) # existing atom
+    IO.puts(separator)
     ETerm.show(:new_atom) # custom atom
+    IO.puts(separator)
     ETerm.show([]) # empty list
+    IO.puts(separator)
     ETerm.show([100, :atom_1, 1.5]) # list
+    IO.puts(separator)
     ETerm.show({100, :atom_1, 1.5}) # tuple
+    IO.puts(separator)
   end
 end
 ETerm.get_all_datatype_info()

@@ -211,7 +211,12 @@ defmodule ETerm do
     ETerm.show([100, :atom_1, 1.5]) # list
     IO.puts(separator)
     ETerm.show({100, :atom_1, 1.5}) # tuple
+    IO.puts(separator) 
+    ETerm.show(%{}) # empty map
     IO.puts(separator)
+    ETerm.show(%{:key1: 1}) # map with one key
+    IO.puts(separator)
+    ETerm.show(%{:key1 => 1, :key2 => 2}) # map with two keys
   end
 end
 ETerm.get_all_datatype_info()

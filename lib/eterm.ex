@@ -210,6 +210,8 @@ defmodule ETerm do
     IO.puts(separator)
     ETerm.show([100, :atom_1, 1.5]) # list
     IO.puts(separator)
+    ETerm.show({}) # empty tuple
+    IO.puts(separator)
     ETerm.show({100, :atom_1, 1.5}) # tuple
     IO.puts(separator) 
     ETerm.show(%{}) # empty map

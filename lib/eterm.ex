@@ -219,6 +219,9 @@ defmodule ETerm do
     ETerm.show(%{:key1 => 1}) # map with one key
     IO.puts(separator)
     ETerm.show(%{:key1 => 1, :key2 => 2}) # map with two keys
+    IO.puts(separator)
+    large_map = 1..33 |> Enum.map(fn val -> {val, "#{val}"} end) |> Map.new()
+    ETerm.show(large_map) # map with 33 keys
   end
 end
 ETerm.get_all_datatype_info()

@@ -220,8 +220,7 @@ defmodule ETerm do
     IO.puts(separator)
     ETerm.show(%{:key1 => 1, :key2 => 2}) # map with two keys
     IO.puts(separator)
-    large_map = 1..33 |> Enum.map(fn val -> {val, "#{val}"} end) |> Map.new()
-    ETerm.show(large_map) # map with 33 keys
+    ETerm.show(""hello) # string - binary
   end
 end
 ETerm.get_all_datatype_info()

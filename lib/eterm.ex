@@ -220,7 +220,7 @@ defmodule ETerm do
     IO.puts(separator)
     ETerm.show(%{:key1 => 1, :key2 => 2}) # map with two keys
     IO.puts(separator)
-    ETerm.show(""hello) # string - binary
+    ETerm.show("hello") # string - binary
   end
 end
 ETerm.get_all_datatype_info()

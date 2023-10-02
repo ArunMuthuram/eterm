@@ -10,6 +10,7 @@ static ERL_NIF_TERM format(ErlNifEnv *env, ERL_NIF_TERM term)
 
 static ERL_NIF_TERM parse(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[])
 {
+	printf("%d", argv[0]);
 	if (!(argv[0] & 2)) {
 		/* list */
 		ERL_NIF_TERM tag = enif_make_atom(env, "list");

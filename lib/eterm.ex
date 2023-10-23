@@ -194,37 +194,9 @@ defmodule ETerm do
 
   def get_all_datatype_info() do
     separator = "------------------------------------------------------------------------------------------------------------"
-    ETerm.show("1") # string - binary
+    ETerm.show(Enum.to_list(1..64) |> List.to_string) # string - binary
     IO.puts(separator)
-    ETerm.show("12") # string - binary
-    IO.puts(separator)
-    ETerm.show("123") # string - binary
-    IO.puts(separator)
-    ETerm.show("1234") # string - binary
-    IO.puts(separator)
-    ETerm.show("12345") # string - binary
-    IO.puts(separator)
-    ETerm.show("123456") # string - binary
-    IO.puts(separator)
-    ETerm.show("1234567") # string - binary
-    IO.puts(separator)
-    ETerm.show("12345678") # string - binary
-    IO.puts(separator)
-    ETerm.show("123456789") # string - binary
-    IO.puts(separator)
-    ETerm.show("1234567890") # string - binary
-    IO.puts(separator)
-    ETerm.show("12345678901") # string - binary
-    IO.puts(separator)
-    ETerm.show("123456789012") # string - binary
-    IO.puts(separator)
-    ETerm.show("1234567890123") # string - binary
-    IO.puts(separator)
-    ETerm.show("12345678901234") # string - binary
-    IO.puts(separator)
-    ETerm.show("123456789012345") # string - binary
-    IO.puts(separator)
-    ETerm.show("1234567890123456") # string - binary
+    ETerm.show(Enum.to_list(1..65) |> List.to_string) # string - binary
     IO.puts(separator)
   end
 end

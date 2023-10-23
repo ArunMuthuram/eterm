@@ -194,35 +194,38 @@ defmodule ETerm do
 
   def get_all_datatype_info() do
     separator = "------------------------------------------------------------------------------------------------------------"
-    ETerm.show(1) # small integer
+    ETerm.show("1") # string - binary
     IO.puts(separator)
-    ETerm.show(0b11111111_11111111_11111111_11111111_11111111_11111111_11111111_11111111_10101010) # pos big integer
+    ETerm.show("12") # string - binary
     IO.puts(separator)
-    ETerm.show(0b11111111_11111111_11111111_11111111_11111111_11111111_11111111_11111111_10101010 * -1) # neg big integer
+    ETerm.show("123") # string - binary
     IO.puts(separator)
-    ETerm.show(250.125) # float
+    ETerm.show("1234") # string - binary
     IO.puts(separator)
-    ETerm.show(false) # existing atom
+    ETerm.show("12345") # string - binary
     IO.puts(separator)
-    ETerm.show(:new_atom) # custom atom
+    ETerm.show("123456") # string - binary
     IO.puts(separator)
-    ETerm.show([]) # empty list
+    ETerm.show("1234567") # string - binary
     IO.puts(separator)
-    ETerm.show([100, :atom_1, 1.5]) # list
+    ETerm.show("12345678") # string - binary
     IO.puts(separator)
-    ETerm.show({}) # empty tuple
+    ETerm.show("123456789") # string - binary
     IO.puts(separator)
-    ETerm.show({100, :atom_1, 1.5}) # tuple
-    IO.puts(separator) 
-    ETerm.show(%{}) # empty map
+    ETerm.show("1234567890") # string - binary
     IO.puts(separator)
-    ETerm.show(%{:key1 => 1}) # map with one key
+    ETerm.show("12345678901") # string - binary
     IO.puts(separator)
-    ETerm.show(%{:key1 => 1, :key2 => 2}) # map with two keys
+    ETerm.show("123456789012") # string - binary
     IO.puts(separator)
-    ETerm.show("hello world") # string - binary
+    ETerm.show("1234567890123") # string - binary
     IO.puts(separator)
-    ETerm.show(<<10::2>>) # bitstring
+    ETerm.show("12345678901234") # string - binary
+    IO.puts(separator)
+    ETerm.show("123456789012345") # string - binary
+    IO.puts(separator)
+    ETerm.show("1234567890123456") # string - binary
+    IO.puts(separator)
   end
 end
 ETerm.get_all_datatype_info()

@@ -224,7 +224,7 @@ defmodule ETerm do
     IO.puts(separator)
     ETerm.show(<<10::2>>) # bitstring
     IO.puts(separator)
-    ETerm.show(self()) # PID
+    ETerm.show(:erlang.list_to_pid('<0.1.1>')) # PID
     IO.puts(separator)
     ETerm.show(:erlang.list_to_pid('<0.268435455.4294967295>')) # Max PID
   end

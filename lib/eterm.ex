@@ -223,6 +223,8 @@ defmodule ETerm do
     ETerm.show("hello world") # string - binary
     IO.puts(separator)
     ETerm.show(<<10::2>>) # bitstring
+    IO.puts(separator)
+    ETerm.show(self()) # PID
   end
 end
 ETerm.get_all_datatype_info()
